@@ -1,0 +1,30 @@
+﻿<Window x:Class="AdoWPF.Overschrijven"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdoWPF"
+        mc:Ignorable="d"
+        Title="Overschrijven" Height="350" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="180"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <Label Content="Van Rekening Nr:" HorizontalAlignment="Left" Margin="0 35 0 0"></Label>
+            <Label Content="Naar Rekening Nr:" Margin="0 5" HorizontalAlignment="Left"></Label>
+            <Label Content="Bedrag:" HorizontalAlignment="Left"></Label>
+            <Button Name="buttonSaldo" Margin="0 20" Height="25" Width="100" Content="Saldo" Click="buttonSaldo_Click"></Button>
+            <Button Name="buttonInfo" Height="25" Width="100" Content="Info" Click="buttonInfo_Click"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="2">
+            <TextBox Name="textBoxVanRekNr" Margin="0 35 0 0" Height="25" Width="150"></TextBox>
+            <TextBox Name="textBoxNaarRekNr" Margin="0 5" Height="25" Width="150"></TextBox>
+            <TextBox Name="textBoxBedrag" Height="25" Width="150"></TextBox>
+            <Button Name="buttonOverschrijven" Margin="0 20" Height="25" Width="150" Content="Overschrijven" Click="buttonOverschrijven_Click"></Button>
+        </StackPanel>
+        <Label Name="labelStatus" Content="Leeg maken" Grid.ColumnSpan="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 20"></Label>
+    </Grid>
+</Window>
